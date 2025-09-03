@@ -6,3 +6,10 @@ install:
 script:
   - python train_model.py
   - pytest test_model.py
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+# Final trigger
+>>>>>>> 28e6cab0ae5fd141bca43f8bec55c417b841d42b
+>>>>>>> 453c3e461fe111aa33fdd0fa711ec2b4021a328d
