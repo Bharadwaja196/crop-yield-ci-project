@@ -1,1 +1,5 @@
 best_model.pkl filter=lfs diff=lfs merge=lfs -text
+<<<<<<< HEAD
+=======
+*.pkl filter=lfs diff=lfs merge=lfs -text
+>>>>>>> 28e6cab0ae5fd141bca43f8bec55c417b841d42b

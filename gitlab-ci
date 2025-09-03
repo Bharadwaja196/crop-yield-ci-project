@@ -1,0 +1,25 @@
+# GitLab CI/CD configuration for Python project
+stages:
+  - test
+  - build
+
+# Test stage
+test:
+  stage: test
+  image: python:3.9
+  before_script:
+    - python --version
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+  script:
+    - pytest
+
+# Build stage (optional, for example packaging)
+build:
+  stage: build
+  image: python:3.9
+  script:
+    - python setup.py sdist bdist_wheel
+  artifacts:
+    paths:
+      - dist/
