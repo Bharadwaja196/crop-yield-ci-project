@@ -1,0 +1,22 @@
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  image: python:3.9
+  before_script:
+    - python --version
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+  script:
+    - pytest
+
+build:
+  stage: build
+  image: python:3.9
+  script:
+    - python setup.py sdist bdist_wheel
+  artifacts:
+    paths:
+      - dist/
